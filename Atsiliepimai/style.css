@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-size: 15px;
+  font-family: Calibri, sans-serif; }
+
+.main {
+  background: white;
+  margin: 0 auto;
+  margin-top:20px;
+  padding: 0.9em;
+  width: 550px;
+  border: 2px solid #ccc;
+ }
+
+h1, h2 {
+  padding: 5px 0px 10px 0px;
+  margin: 0;
+  font-weight: normal; }
+
+h1 {
+  text-transform: uppercase; }
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 0.3em 0;
+    padding: 0;
+}
+
+.asterisk {
+  color: red; }
+
+.greytext {
+  color: grey; }
+
+input, select {
+  height: 20px;
+  border: 1px solid lightgrey; }
+  input:not(.consent),
+  select:not(.consent) {
+    width: 100%; }
+  input:focus,
+  select:focus {
+    border: 1px solid grey; }
+  input:valid:focus,
+  select:valid:focus {
+    border: 1px solid green; }
+  input:invalid:focus,
+  select:invalid:focus {
+    border: 1px solid red; }
+
+textarea {
+  width: 100%;
+  border: 1px solid lightgrey;
+  resize: none; }
+  textarea:focus {
+    border: 1px solid grey; }
+
+table {
+  width: 90%; }
+
+.row {
+  height: 25px; }
+
+.column-label {
+  width: 170px; }
+
+.column-input-left {
+  width: 160px; }
+  .column-input-left > input {
+    width: 100%; }
+
+.column-input-right > input {
+  width: 100%; }
+
+.column-consent {
+  display: inline; }
+  .column-consent > input,
+  .column-consent label {
+    margin: 0px;
+    height: 20px;
+    vertical-align: middle; }
+
+.column-input:has(.column-consent) {
+  padding-left: 0px; }

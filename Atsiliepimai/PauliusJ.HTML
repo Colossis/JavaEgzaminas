@@ -1,0 +1,80 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="js/jquery-3.3.1.js"></script> -->
+    <title>Atsiliepimai</title>
+  </head>
+  <body>
+    <div class="main">
+      <form class="form" method="post" onsubmit="submitFunction()">
+        <h1>Atsiliepimai</h1>
+        <hr/>
+        <table>
+          <tr class="Data-info">
+            <td colspan="3"><h2>Palikite savo atsiliepimą:</h2></td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="email">
+                <span>El. pašto adresas: </span>
+                <span class="asterisk" title="Privalomas laukas">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="email" name="email" id="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" autocomplete="off" oninput="this.setCustomValidity('')" required="">
+            </td>
+          <tr class="row-consent">
+            <td><!--Empty field--></td>
+          <tr class="row">
+            <td class="column-label">
+              <label for="name">
+                <span>Vardas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="name" id="name" autocomplete="off" pattern="[a-zA-ZąčęėįšųūĄČĘĖĮŠŲŪ.\- ]{1,}" oninput="this.setCustomValidity('')" required="">
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="city">
+                <span>Miestas: </span>
+                <span class="asterisk" title="Privaloma užpildyti">*</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <input type="text" name="city" id="city" autocomplete="off" oninput="this.setCustomValidity('')" required="">
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="column-label">
+              <label for="info">
+                <span>Jūsų atsiliepimas:</span>
+              </label>
+            </td>
+            <td colspan="2" class="column-input">
+              <textarea name="info" id="info" cols="30" rows="6"></textarea>
+            </td>
+          </tr>
+          <tr class="row-required">
+            <td></td>
+            <td colspan="2" class="column-input">
+              <span class="greytext">Prašome užpildyti visus pažymėtus laukus</span>
+              <span class="asterisk" title="Privaloma užpildyti">*</span>
+            </td>
+          </tr>
+          <tr class="row-submit">
+            <td></td>
+            <td colspan="2" class="column-input">
+              <button type="submit" id="submit-button">Pateikti</button>
+            </td>
+          </tr>
+    	</table>
+      </form>
+    </div>
+    <script src="js/validation.js"></script>
+  </body>
+</html>
